@@ -1,0 +1,18 @@
+<div class="row" tal:define="lernobjekte view/lernobjekte">
+    <table width="100%" class="listing">
+      <thead>
+        <tr>
+          <th>Titel des Materials</th>
+          <th>Beschreibung</th>
+          <th>Änderungsdatum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr tal:repeat="lernobjekt lernobjekte">
+          <td><a tal:attributes="href string:http://de.serlo.org${lernobjekt/link}" tal:content="lernobjekt/title">Titel</a></td>
+          <td tal:content="lernobjekt/description"/>
+          <td tal:content="python: lernobjekt.get('lastModified').get('date')" />
+        </tr>
+      </tbody>
+   </table>
+</div>
