@@ -1,0 +1,39 @@
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Able Player Audio Demo #4</title>
+<link rel="stylesheet" href="demos.css" type="text/css">
+
+<!-- Dependencies -->
+<script src="modernizr.custom.js"></script>
+<script src="jquery.min.js"></script>
+<script src="js.cookie.js"></script>
+
+<!-- Able Player CSS -->
+<link rel="stylesheet" href="ableplayer.min.css" type="text/css"/>
+
+<!-- Able Player JavaScript -->
+<script src="ableplayer.js"></script>
+
+</head>
+
+<body>
+
+<h1>Able Player Audio Demo<br/>Audio Player mit interaktivem Transcript"</h1>
+
+<p>Das Transcript, hier also der vorgetragene Text unterstützt das sogenannte WebVTT-Format.</p>
+<!--<ul>
+  <li><strong>data-lyrics-mode</strong> - forces a line break between and within captions in the transcript</li>
+  <li><strong>data-transcript-title</strong> - to override default title, which is "Transcript", or "Lyrics" if the data-lyrics-mode attribute is present</li>
+</ul>-->
+
+<!--<p>For additional demos see the <a href="index.html">Index of <em>Able Player</em> Examples</a>.</p>-->
+
+<!-- use the following markup for each media element -->
+<audio id="audio1" width="480" class="ump-media" preload="auto" data-able-player data-lyrics-mode data-transcript-title="Tab Inhalte">
+  <source type="audio/mpeg" src="audioinhalte.mp3"/>
+  <track kind="captions" src="audioinhalte.vtt" srclang="de" label="Deutsch"/>
+</audio>
+
+</body>
+</html>
